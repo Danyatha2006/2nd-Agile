@@ -1,20 +1,18 @@
+"""Random Forest Regression Example."""
+
 import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
-# Sample dataset (replace this with your actual data)
-X = np.array([[40], [50], [60], [70], [80], [90] , [5]])
-y = np.array([45, 55, 65, 75, 85, 95 , 50])
+# Sample dataset
+x = np.array([[40], [50], [60], [70], [80], [90]])
+y = np.array([45, 55, 65, 75, 85, 95])
 
 # Create model
-RandomForestRegModel = RandomForestRegressor(n_estimators=100, random_state=0)
+random_forest_reg_model = RandomForestRegressor()
 
 # Train model
-RandomForestRegModel.fit(X, y)
+random_forest_reg_model.fit(x, y)
 
-# Predict for 70 marks
-X_marks = np.array([[70]])   # Must be 2D array
-prediction = RandomForestRegModel.predict(X_marks)
-
-print("Predicted value:", prediction)
+# Prediction
+x_marks = [[70]]
+print(random_forest_reg_model.predict(x_marks))
