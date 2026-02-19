@@ -4,8 +4,8 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
 # Sample dataset (replace this with your actual data)
-X = np.array([[40], [50], [60], [70], [80], [90]])
-y = np.array([45, 55, 65, 75, 85, 95])
+X = np.array([[40], [50], [60], [70], [80], [90] , [5]])
+y = np.array([45, 55, 65, 75, 85, 95 , 50])
 
 # Create model
 RandomForestRegModel = RandomForestRegressor(n_estimators=100, random_state=0)
